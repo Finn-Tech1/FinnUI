@@ -54,17 +54,19 @@
 
 .clock {
   text-align: center;
-  flex: 0.5;
+  position: absolute;
+  top: 15%; /* Retain original vertical position */
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%); /* Shift back by 50% of its width for horizontal centering */
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  text-shadow: 0 3px 6px #333, 0 1px 0 #333;
+  justify-content: center;
 }
 
 .time {
   font-weight: normal;
-  font-size: 4.5em;
+  font-size: 4.5em; /* Matches design */
 }
 
 .slider {
@@ -187,42 +189,41 @@
   color: red;
 }
 
-.cam {
-  position: fixed; /* Fixes the element at the bottom-right corner */
+/* Flashlight and Camera Icons */
+.left, .cam {
+  position: fixed;
   color: white;
-  background-color: rgba(0, 0, 0, 0.5);
-  border-style: solid 1px;
-  border-radius: 100%;
-  height: 48px;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+  border-radius: 50%; /* Ensures circular shape */
+  height: 48px; /* Consistent size */
   width: 48px;
-  bottom: 15px;
-  right: 15px;
   display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.camera {
-  display: block;
-  margin: 0;
+  justify-content: center; /* Center the icon horizontally */
+  align-items: center; /* Center the icon vertically */
+  z-index: 10; /* Keep on top of other elements */
+  backdrop-filter: blur(5px); /* Apply blur effect */
+  -webkit-backdrop-filter: blur(5px); /* Safari support */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Optional shadow for emphasis */
 }
 
 .left {
-  position: fixed; /* Fixes the element at the bottom-right corner */
-  color: white;
-  background-color: rgba(0, 0, 0, 0.5);
-  border-style: solid 1px;
-  border-radius: 100%;
-  height: 48px;
-  width: 48px;
-  bottom: 15px;
-  left: 15px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  bottom: 14px; /* Adjust spacing from the bottom */
+  left: 14px; /* Symmetrical spacing */
 }
 
-.flashlight {
-  display: block;
-  margin: 0;
+.cam {
+  bottom: 14px; /* Adjust spacing */
+  right: 14px; /* Symmetrical spacing */
+}
+
+/* Ensure Icon Centering */
+.left sl-icon, .cam sl-icon {
+  font-size: 1.5em; /* Adjust icon size */
+  line-height: 0; /* Reset line height for proper centering */
+}
+
+/* Optional Hover Effect */
+.left:hover, .cam:hover {
+  background-color: rgba(255, 255, 255, 0.3); /* Slightly lighter on hover */
+  transition: background-color 0.3s ease;
 }
