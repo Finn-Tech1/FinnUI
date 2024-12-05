@@ -186,3 +186,43 @@
 .low-battery {
   color: red;
 }
+
+.cam {
+  position: fixed; /* Fixes the element at the bottom-right corner */
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-style: solid 1px;
+  border-radius: 100%;
+  height: 48px;
+  width: 48px;
+  bottom: 15px;
+  right: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.camera {
+  display: block;
+  margin: 0;
+}
+
+.left {
+  position: fixed; /* Fixes the element at the bottom-right corner */
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-style: solid 1px;
+  border-radius: 100%;
+  height: 48px;
+  width: 48px;
+  bottom: 15px;
+  left: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flashlight {
+  display: block;
+  margin: 0;
+}

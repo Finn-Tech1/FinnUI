@@ -105,7 +105,7 @@ class LockScreen extends HTMLElement {
         <sl-icon name="battery" class="battery-icon"></sl-icon>
         <div class="battery-level"></div>
         <div class="flex-fill"></div>
-        <sl-icon name="camera" class="camera"></sl-icon>
+        <div class="cam"><sl-icon name="camera" class="camera"></sl-icon></div>
       </div>
         
     </div>
